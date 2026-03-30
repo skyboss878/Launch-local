@@ -1,0 +1,84 @@
+{
+  "theme": "Light",
+  "archetype": "1 (Organic & Earthy)",
+  "vibe": "Grounded, tactile, modern, premium, trustworthy",
+  "colors": {
+    "background_base": "#FAF9F6",
+    "background_surface": "#FFFFFF",
+    "background_alt": "#F2EFE9",
+    "primary": "#4A5D4E",
+    "primary_hover": "#3A4A3E",
+    "secondary": "#8E735B",
+    "secondary_hover": "#7A614A",
+    "text_primary": "#1C1917",
+    "text_secondary": "#57534E",
+    "border": "#E7E5E4",
+    "error": "#991B1B",
+    "success": "#166534"
+  },
+  "typography": {
+    "heading_font": "Cabinet Grotesk",
+    "body_font": "Manrope",
+    "scale": {
+      "h1": "text-5xl sm:text-6xl tracking-tighter font-medium",
+      "h2": "text-3xl sm:text-4xl tracking-tight font-medium",
+      "h3": "text-2xl sm:text-3xl tracking-tight",
+      "h4": "text-xl font-medium",
+      "body": "text-base leading-relaxed",
+      "small": "text-sm tracking-wide",
+      "overline": "text-xs tracking-[0.2em] uppercase font-bold text-stone-500"
+    }
+  },
+  "spacing_and_layout": {
+    "container_padding": "p-6 md:p-12 lg:p-16",
+    "gap_standard": "gap-8",
+    "gap_large": "gap-12 md:gap-16",
+    "border_radius": "rounded-2xl",
+    "grid_bento": "grid-cols-1 md:grid-cols-12 gap-8"
+  },
+  "surfaces_and_shadows": {
+    "cards": "bg-white border border-stone-200 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300",
+    "header": "backdrop-blur-xl bg-[#FAF9F6]/80 border-b border-stone-200 sticky top-0 z-50",
+    "image_overlay": "bg-black/30",
+    "buttons": "rounded-full px-6 py-3 font-medium transition-all duration-300 active:scale-[0.98]"
+  },
+  "motion": {
+    "hover": "transition-transform duration-300 ease-out hover:-translate-y-1",
+    "page_load": "fade-in, slide-up with 0.4s duration and stagger"
+  },
+  "components": {
+    "navigation": "Include Logo, Links (Home, Shop, Categories, About), Cart icon with badge. Sticky positioning. Glassmorphism.",
+    "hero": "Full width or large rounded container (max-h-[80vh]). Image with overlay. Left-aligned text. H1 + Subtitle + Primary CTA.",
+    "product_grid": "Bento-style or 3-4 column grid. Large images, subtle grey backgrounds for products, clean typography for price and title.",
+    "dashboard": "Strict grid hierarchy, pure white surfaces on stone background. Compact spacing compared to storefront. Recharts for analytics.",
+    "checkout": "Shadcn UI forms. Focused, zero-distraction layout. Order summary pinned to the right."
+  },
+  "media": {
+    "logo": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/6c023cc2-2fc0-43fb-8359-ba7aa5d1b242/images/0daed73c7d3787c0323a12e73246227c1c8fc001f61e751969b9ca055bd6c5ae.png",
+      "alt": "Launch Local minimalist logo"
+    },
+    "hero": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/6c023cc2-2fc0-43fb-8359-ba7aa5d1b242/images/49800f2fea2613392a45855e36288991a996c5756148b662287ac7701e1a346a.png",
+      "alt": "Curated lifestyle space with home goods, hardware, and candles"
+    },
+    "categories": {
+      "home_and_hardware": "https://images.pexels.com/photos/5583045/pexels-photo-5583045.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "fragrances": "https://images.unsplash.com/photo-1687200877070-143b149c2315?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwzfHxwZXJmdW1lJTIwYm90dGxlJTIwYWVzdGhldGljfGVufDB8fHx8MTc3NDg5MjQ2Mnww&ixlib=rb-4.1.0&q=85",
+      "candles": "https://images.unsplash.com/photo-1617213146999-f33c20d2a534?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzF8MHwxfHNlYXJjaHwyfHxtaW5pbWFsaXN0JTIwY2FuZGxlfGVufDB8fHx8MTc3NDg5MjQ2NHww&ixlib=rb-4.1.0&q=85",
+      "generators": "https://images.pexels.com/photos/32713414/pexels-photo-32713414.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "battery_packs": "https://static.prod-images.emergentagent.com/jobs/6c023cc2-2fc0-43fb-8359-ba7aa5d1b242/images/efc28db7f8d671608d14fc0e36d8d2659f56f41699ffd32623c506e98775e6f5.png",
+      "apparel": "https://images.pexels.com/photos/7671167/pexels-photo-7671167.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    }
+  },
+  "icon_library": "@phosphor-icons/react",
+  "instructions_to_main_agent": [
+    "Use standard HTML/Tailwind for the marketing/storefront pages to allow asymmetric grids and overlapping elements.",
+    "Use Shadcn UI primarily for the Admin Dashboard and complex interactive components (Shopping Cart sheet, Checkout forms).",
+    "Ensure the hero image has a subtle gradient overlay (bg-black/30) so text remains legible, but do not obscure the image entirely.",
+    "Add 'data-testid' to all buttons, links, and forms.",
+    "Do NOT use pure #000000 or #FFFFFF for large blocks; use the provided off-white background (#FAF9F6) and deep charcoal text (#1C1917).",
+    "Implement the bento grid (grid-cols-1 md:grid-cols-12) for the categories section.",
+    "When rendering images, use 'object-cover' and ensure they do not exceed 80vh on mobile."
+  ]
+}
