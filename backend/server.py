@@ -291,7 +291,7 @@ async def get_product(product_id: str):
         raise HTTPException(status_code=404, detail="Product not found")
     return product
 
-@api_router.post("/admin/products")
+@api_router.post("/admin/products", status_code=201)
 async def create_product(product: ProductCreate, request: Request):
     await get_admin_user(request)
     
