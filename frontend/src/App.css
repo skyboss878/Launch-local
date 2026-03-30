@@ -1,34 +1,73 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Additional App-specific styles */
+.glass-header {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+.hero-overlay {
+  background: linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 100%);
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+.product-card:hover .product-image {
+  transform: scale(1.05);
 }
 
-.App-link {
-    color: #61dafb;
+.product-image {
+  transition: transform 0.4s ease-out;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+/* Category card hover effects */
+.category-card:hover .category-overlay {
+  background: rgba(0,0,0,0.4);
+}
+
+.category-overlay {
+  transition: background 0.3s ease;
+}
+
+/* Form input focus */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(74, 93, 78, 0.2);
+}
+
+/* Badge styles */
+.badge-featured {
+  @apply bg-[#4A5D4E] text-white text-xs px-2 py-1 rounded-full font-medium;
+}
+
+.badge-low-stock {
+  @apply bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full font-medium;
+}
+
+.badge-out-of-stock {
+  @apply bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full font-medium;
+}
+
+/* Admin dashboard styles */
+.stat-card {
+  @apply bg-white border border-stone-200 rounded-2xl p-6 
+         transition-all duration-300 hover:shadow-lg;
+}
+
+/* Toast modifications */
+[data-sonner-toast] {
+  font-family: 'Manrope', sans-serif !important;
+}
+
+/* Skeleton loading */
+.skeleton {
+  @apply animate-pulse bg-stone-200 rounded;
+}
+
+/* Page transitions */
+.page-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
