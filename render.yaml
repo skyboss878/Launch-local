@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: launch-local-backend
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn server:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: MONGO_URL
+        value: mongodb+srv://luanchlocalbak_db_user:qHrpSqxLpa4Sezlv@cluster0.u4prlqd.mongodb.net/?appName=Cluster0
+      - key: JWT_SECRET
+        value: launchlocal_secret_2026
+      - key: STRIPE_API_KEY
+        sync: false
