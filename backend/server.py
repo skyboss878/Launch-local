@@ -547,6 +547,7 @@ app.add_middleware(
     allow_origins=["*"],
     allow_methods=["*"],
     allow_headers=["*"],
+)
 
 # ============ STARTUP EVENTS ============
 @app.on_event("startup")
