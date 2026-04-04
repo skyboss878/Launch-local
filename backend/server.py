@@ -23,8 +23,8 @@ logger = logging.getLogger(__name__)
 
 # MongoDB connection
 mongo_url = os.environ.get("MONGO_URL", "")
-client = AsyncIOMotorClient(mongo_url)
-db = client[os.environ.get("DB_NAME", "launchlocal")]
+client = AsyncIOMotorClient(mongo_url) if mongo_url else None
+db = client[os.environ.get("DB_NAME", "launchlocal")] if client else None
 
 # JWT Configuration
 JWT_ALGORITHM = "HS256"
